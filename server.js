@@ -5,11 +5,15 @@ const fs = require('fs');
 
 const homeRouter = require('./home');
 const aboutRouter = require('./about')
+const contributeRouter = require('./contribute');
+const statisticRouter = require('./statistic');
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended : true }));
+
 app.set('view engine', 'handlebars');
+
 app.engine('handlebars', handlebars({defaultLayout: 'menu'}));
 
 app.get('/menuStyle.css', (req, res) => {
@@ -17,8 +21,9 @@ app.get('/menuStyle.css', (req, res) => {
 });
 
 app.use('/', homeRouter);
-
+app.use('/contribute', contributeRouter);
 app.use('/about', aboutRouter);
+app.use('/statistic', statisticRouter);
 
 app.listen(8888, () => {
 	console.log("Your home work is online at 8888")
