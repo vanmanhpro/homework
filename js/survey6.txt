@@ -1,0 +1,1 @@
+{"questionNumber":6,"question":"Fan of Justin Bieber?","noVote":3,"yesVote":2}

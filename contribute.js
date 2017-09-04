@@ -10,6 +10,7 @@ Router.get('/', (req, res) => {
 
 Router.post('/', (req, res) => {
 	var newQuestion = req.body.question;
+	console.log(req.body);
 	fileInteraction.pushQuestion(newQuestion);
 	res.redirect('/contribute');
 })

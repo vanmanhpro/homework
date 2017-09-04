@@ -1,0 +1,1 @@
+{"questionNumber":4,"question":"Do you want to be wealthy?","noVote":0,"yesVote":0}

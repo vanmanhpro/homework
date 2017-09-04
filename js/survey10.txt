@@ -1,0 +1,1 @@
+{"questionNumber":10,"question":"Have you ever been to a foreign country?","yesVote":0,"noVote":0}

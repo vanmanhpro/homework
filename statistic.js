@@ -7,12 +7,12 @@ const fileInteraction = require('./js/fileInteraction');
 
 Router.get('/', (req, res) => {
 	var questionNumber = fs.readFileSync(__dirname + '/currentFileNumber.txt','utf-8');
-	var questionStatistic = fileInteraction.getQuestionStatistic(questionNumber);
+	var questionStatistic = fileInteraction.getQuestionStatisticObject(questionNumber);
 
 	res.render('statistic', {
 			question : questionStatistic.question,
-			yesNumber : questionStatistic.yesNumber,
-			noNumber : questionStatistic.noNumber
+			yesVote : questionStatistic.yesVote,
+			noVote : questionStatistic.noVote
 		});
 })
 
